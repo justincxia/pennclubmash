@@ -24,8 +24,12 @@ export function VoteView({ clubs, recordVote }) {
   const handleVote = (winner, loser) => {
     recordVote(winner.code, loser.code)
     setVotesThisSession((v) => v + 1)
-    const next = pickRandomPair(clubs, [winner.code, loser.code])
-    setPair(next || pickRandomPair(clubs))
+    const pool = clubs.filter((c) => c.code !== winner.code && c.code !== loser.code)
+    const next =
+      pool.length > 0
+        ? [winner, pool[Math.floor(Math.random() * pool.length)]]
+        : pickRandomPair(clubs)
+    setPair(next)
   }
 
   if (clubs.length < 2) return null
