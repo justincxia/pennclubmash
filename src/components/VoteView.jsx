@@ -51,7 +51,6 @@ export function VoteView({ clubs, recordVote }) {
           onClick={() => handleVote(clubB, clubA)}
         />
       </div>
-      <p className="vote-count">Votes this session: {votesThisSession}</p>
     </div>
   )
 }
