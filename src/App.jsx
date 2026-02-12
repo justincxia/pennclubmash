@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { useClubs } from './hooks/useClubs'
 import { useRankings } from './hooks/useRankings'
 import { VoteView } from './components/VoteView'
@@ -17,6 +18,7 @@ function App() {
           <div className="loader" />
           <p>Loading clubs from Penn Clubs…</p>
         </div>
+        <Analytics />
       </div>
     )
   }
@@ -30,6 +32,7 @@ function App() {
           <p>{error}</p>
           <p>Check your connection or try again later.</p>
         </div>
+        <Analytics />
       </div>
     )
   }
@@ -49,6 +52,7 @@ function App() {
           />
         </Routes>
       </main>
+      <Analytics />
     </div>
   )
 }
