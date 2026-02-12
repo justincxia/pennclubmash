@@ -143,12 +143,16 @@
     padding: 0.5rem;
   }
 
+  .vs-label {
+    margin-bottom: 0.5rem;
+  }
+
   .vs-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 1fr;
-    gap: 0.5rem;
+    grid-template-rows: auto auto auto;
+    gap: 0.4rem;
     align-items: stretch;
-    min-height: 0;
+    flex: 0 1 auto;
   }
 
   .vs-divider {
@@ -160,34 +164,39 @@
     flex-direction: row;
     align-items: center;
     min-height: 0;
-    flex: 1;
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 
   .club-card-image {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
-    min-height: 70px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     flex-shrink: 0;
-    border-radius: 8px;
+    border-radius: 6px;
   }
 
   .club-card-content {
     flex: 1;
     min-width: 0;
-    padding: 0.4rem 0.5rem;
+    padding: 0.3rem 0.4rem;
   }
 
   .club-card-content h3 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .club-card-content .subtitle {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .skip-btn {
+    margin-top: 0.75rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
   }
 }
