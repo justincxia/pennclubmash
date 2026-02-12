@@ -1,0 +1,43 @@
+:root {
+  --primary: #011F5B;
+  --secondary: #990000;
+  --penn-red: var(--secondary);
+  --penn-blue: var(--primary);
+  --penn-blue-light: #1a3a6e;
+  --cream: #F5F1E8;
+  --gold: #7EB8DA;
+  --dark-bg: #0a1628;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--dark-bg);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
