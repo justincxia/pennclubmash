@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const PENN_CLUBS_API = import.meta.env.DEV
-  ? '/api/clubs/?format=json'
-  : 'https://pennclubs.com/api/clubs/?format=json'
+const API_BASE = import.meta.env.DEV ? '/mash' : (import.meta.env.VITE_API_URL || '/mash')
 
 export function useClubs() {
   const [clubs, setClubs] = useState([])
@@ -12,7 +10,7 @@ export function useClubs() {
   useEffect(() => {
     async function fetchClubs() {
       try {
-        const res = await fetch(PENN_CLUBS_API)
+        const res = await fetch(`${API_BASE}/clubs`)
         if (!res.ok) throw new Error('Failed to fetch clubs')
         const data = await res.json()
         const activeClubs = (Array.isArray(data) ? data : []).filter(

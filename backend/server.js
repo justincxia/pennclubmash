@@ -41,6 +41,17 @@ function saveRatings(ratings) {
 app.use(cors())
 app.use(express.json())
 
+app.get('/clubs', async (req, res) => {
+  try {
+    const response = await fetch('https://pennclubs.com/api/clubs/?format=json')
+    const data = await response.json()
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    res.status(500).json({ error: 'Failed to fetch clubs' })
+  }
+})
+
 app.get('/rankings', (req, res) => {
   try {
     const ratings = loadRatings()
