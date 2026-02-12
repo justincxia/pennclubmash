@@ -37,6 +37,11 @@ export function VoteView({ clubs, recordVote }) {
 
   const [clubA, clubB] = pair
 
+  const handleSkip = () => {
+    const next = pickRandomPair(clubs, [clubA.code, clubB.code])
+    setPair(next || pickRandomPair(clubs))
+  }
+
   return (
     <div className="vote-view">
       <p className="vs-label">Which club would you rather join?</p>
@@ -51,6 +56,9 @@ export function VoteView({ clubs, recordVote }) {
           onClick={() => handleVote(clubB, clubA)}
         />
       </div>
+      <button type="button" className="skip-btn" onClick={handleSkip}>
+        Skip
+      </button>
     </div>
   )
 }

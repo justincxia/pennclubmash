@@ -43,6 +43,26 @@
   flex-shrink: 0;
 }
 
+.skip-btn {
+  align-self: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.skip-btn:hover {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .loading-state {
   text-align: center;
   padding: 4rem;
