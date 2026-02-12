@@ -12,6 +12,9 @@ A FaceMash-style voting site that lets users vote on pairs of clubs at the Unive
 
 ## Getting Started
 
+1. Create a MongoDB Atlas cluster (free tier) and get your connection string.
+2. Set the `MONGODB_URI` environment variable (format: `mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/pennclubmash`).
+3. Run:
 ```bash
 npm install
 cd backend && npm install && cd ..
@@ -19,6 +22,8 @@ npm run dev
 ```
 
 This starts both the backend (port 3001) and frontend (port 5173). Open [http://localhost:5173](http://localhost:5173) to use the app.
+
+For production on Render, add `MONGODB_URI` as an environment variable in your service settings.
 
 ## Tech Stack
 
